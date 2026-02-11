@@ -20,4 +20,11 @@ Once you have a running machine:
 2. Enable the Alpine community repository with `setup-apkrepos -c`; lots of the dependencies are in there.
 3. Copy `src/APKBUILD` into your Alpine VM
 4. Execute `abuild -r`.
-5. Copy the built packages out of the VM for publishing. The VM runs SSH on port 22, mapped to 10022 on the host, so you can do this with `scp -P 10022 {your_user}@localhost:~/packages/{your_user}/{arch}/*.apk .` from the host.
+
+## Copying files
+
+By default, the run script will map the `src` directory to `/dev/vdb1` inside the VM. You can mount that inside the VM like so:
+
+`doas mount -t vfat /dev/vdb1 {mount_point}`
+
+Then you can copy files in and out, though note that it only syncs the real and virtual folders at machine start and shutdown.

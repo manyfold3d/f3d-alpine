@@ -42,9 +42,8 @@ fi
 qemu-system-$ARCH $ARCHOPTS $BOOTOPTS \
 	-m 2048 \
 	-drive if=virtio,file=$IMG \
+	-drive file=fat:rw:./src,if=virtio,format=vvfat \
 	-serial stdio \
 	-netdev user,id=eth0 \
 	-device virtio-net-pci,netdev=eth0 \
-	-net user,hostfwd=tcp::10022-:22 \
-	-net nic \
 	-display cocoa
