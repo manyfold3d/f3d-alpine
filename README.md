@@ -6,11 +6,11 @@ F3D APKBUILD packaging work originally by Saijin-Naib at https://pastebin.com/2c
 
 ## Usage
 
-Simply run `make`.
+Simply run `run.sh aarch64` or `run.sh x86_64` depending on which architecture you want.
 
-By default that will run an `aarch64` virtual machine and boot you into a console.
+On first run, it will download the relevant installer ISO and boot it, at which point you can run `setup-alpine` to install properly to the disk `vda`.
 
-To run an x86 VM, run `make x86_64`.
+On subsequent runs, it will boot from `vda` and bring up your existing system.
 
 ## Building
 
