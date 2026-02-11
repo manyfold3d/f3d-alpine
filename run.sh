@@ -45,4 +45,6 @@ qemu-system-$ARCH $ARCHOPTS $BOOTOPTS \
 	-serial stdio \
 	-netdev user,id=eth0 \
 	-device virtio-net-pci,netdev=eth0 \
+	-net user,hostfwd=tcp::10022-:22 \
+	-net nic \
 	-display cocoa
