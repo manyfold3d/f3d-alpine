@@ -1,0 +1,18 @@
+# F3D Alpine package builder environment using macOS / QEMU
+
+## Usage
+
+Simply run `make`.
+
+By default that will run an `aarch64` virtual machine and boot you into a console.
+
+To run an x86 VM, run `make x86_64`.
+
+## Building
+
+Once you have a running machine:
+
+1. Follow the [Alpine build environment guide](https://wiki.alpinelinux.org/wiki/Setting_up_the_build_environment_on_HDD)
+2. Copy `src/APKBUILD` into your Alpine VM
+3. Execute `abuild -r`.
+4. Copy the built packages out of the VM for publishing.
