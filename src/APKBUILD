@@ -1,10 +1,7 @@
 # Contributor: Saijin-Naib <Saijin-Naib_package-maintenance@outlook.com>
 # Maintainer: Saijin-Naib <Saijin-Naib_package-maintenance@outlook.com>
 pkgname=f3d
-#pkgver=3.1.0
-pkgver=3.2.0_git$_gitdate
-_githash="8d2f5be9806f6db4d67686dc8a6351f2ab7cc3b2"
-_gitdate="20250705"
+pkgver=3.4.1
 pkgrel=0
 pkgdesc="Fast and minimalist 3D viewer."
 url="https://f3d.app"
@@ -12,9 +9,8 @@ arch="all"
 license="BSD-3-Clause"
 makedepends="alembic-dev assimp-dev cmake draco-dev draco-static freeimage-dev git git-lfs opencascade-dev openexr-dev samurai vtk-dev"
 subpackages="$pkgname-bash-completion $pkgname-dev $pkgname-doc $pkgname-fish-completion $pkgname-zsh-completion"
-#source="$pkgname-$pkgver.tar.gz::https://github.com/f3d-app/f3d/archive/refs/tags/v$pkgver.tar.gz"
-source="$pkgname-$pkgver.tar.gz::https://github.com/f3d-app/f3d/archive/$_githash.tar.gz"
-builddir="$srcdir/$pkgname-$_githash/"
+source="$pkgname-$pkgver.tar.gz::https://github.com/f3d-app/f3d/archive/refs/tags/v$pkgver.tar.gz"
+builddir="$srcdir/$pkgname-$pkgver/"
 options="!check" #No testsuite in githash version
 build() {
 	if [ "$CBUILD" != "$CHOST" ]; then
