@@ -1,5 +1,9 @@
 # F3D Alpine package builder environment using macOS / QEMU
 
+This repo sets up an Alpine build environment using QEMU on macOS, intended for packaging [F3D](https://f3d.app) using `src/APKBUILD`.
+
+F3D APKBUILD packaging work originally by Saijin-Naib at https://pastebin.com/2ckHAs2Q.
+
 ## Usage
 
 Simply run `make`.
