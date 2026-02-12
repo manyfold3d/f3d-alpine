@@ -18,7 +18,7 @@ Once you have a running machine:
 
 1. Follow the [Alpine build environment guide](https://wiki.alpinelinux.org/wiki/Setting_up_the_build_environment_on_HDD)
 2. Enable the Alpine community repository with `setup-apkrepos -c`; lots of the dependencies are in there.
-3. Copy `src/APKBUILD` into your Alpine VM
+3. Copy `src/f3d/APKBUILD` into your Alpine VM (see below)
 4. Execute `abuild -r`.
 
 ## Copying files
