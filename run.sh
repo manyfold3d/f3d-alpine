@@ -32,7 +32,7 @@ else
 fi
 
 if [ $ARCH = "aarch64" ]; then
-	ARCHOPTS=-"accel hvf -machine virt -cpu host -bios /opt/homebrew/share/qemu/edk2-aarch64-code.fd"
+	ARCHOPTS="-accel hvf -machine virt -cpu host -bios /opt/homebrew/share/qemu/edk2-aarch64-code.fd"
 fi
 
 if [ $ARCH = "x86_64" ]; then
