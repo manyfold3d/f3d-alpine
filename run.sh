@@ -27,7 +27,7 @@ else
 	BOOTOPTS="-cdrom $ISO -boot d"
 
 	echo "Creating new disk at $IMG"
-	qemu-img create -f qcow2 $IMG 8G
+	qemu-img create -f qcow2 $IMG 64G
 
 fi
 
