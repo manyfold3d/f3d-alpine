@@ -90,6 +90,7 @@ build() {
 		-DVTK_BUILD_TESTING="$(want_check && echo ON || echo OFF)" \
 		-DVTK_PYTHON_VERSION="3" \
 		-DVTK_USE_LARGE_DATA=OFF \
+		-DOpenVDB_CMAKE_PATH=/usr/lib/cmake/OpenVDB/ \
 		-DVTK_MODULE_ENABLE_VTK_IOOpenVDB=WANT \
 		-DVTK_MODULE_ENABLE_VTK_RenderingExternal=WANT \
 		-DVTK_MODULE_USE_EXTERNAL_VTK_cgns=OFF \
