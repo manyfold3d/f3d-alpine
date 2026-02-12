@@ -2,7 +2,7 @@
 # Maintainer: Saijin-Naib <Saijin-Naib_package-maintenance@outlook.com>
 pkgname=f3d
 pkgver=3.4.1
-pkgrel=0
+pkgrel=1
 pkgdesc="Fast and minimalist 3D viewer."
 url="https://f3d.app"
 arch="all"
