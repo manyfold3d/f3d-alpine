@@ -10,6 +10,7 @@ url="https://vtk.org/"
 arch="all !s390x"
 license="BSD-3-Clause"
 depends_dev="
+  blosc-dev
 	boost-dev
 	curl-dev
 	double-conversion-dev
@@ -37,6 +38,7 @@ depends_dev="
 	lz4-dev
 	netcdf-dev
 	nlohmann-json
+	onetbb-dev
 	openmpi-dev
 	openvdb-dev
 	pdal-dev
