@@ -23,7 +23,6 @@ build() {
 		-DCMAKE_BUILD_TYPE=None \
 		-DF3D_MODULE_EXR=ON \
 		-DF3D_PLUGIN_BUILD_ASSIMP=ON \
-		-DF3D_PLUGIN_BUILD_EXODUS=ON \
 		-DF3D_PLUGIN_BUILD_OCCT=ON \
 		-DF3D_PLUGIN_BUILD_ALEMBIC=ON \
 		$crossopts
@@ -32,8 +31,6 @@ build() {
   # Draco is only in testing/edge, and we're building on 3.23
 #-DF3D_MODULE_RAYTRACING=OFF \
 	#VTK Not Built With, ospray Not Packaged
-#-DF3D_MODULE_EXTERNAL_RENDERING=OFF \
-	#VTK Not Built With
 #-DF3D_PLUGIN_BUILD_USD=OFF \
 	#Not Packaged
 #-DF3D_PLUGIN_BUILD_VDB=OFF \
