@@ -28,6 +28,7 @@ build() {
 		-DF3D_PLUGIN_BUILD_ASSIMP=ON \
 		-DF3D_PLUGIN_BUILD_OCCT=ON \
 		-DF3D_PLUGIN_BUILD_ALEMBIC=ON \
+		-DF3D_PLUGIN_BUILD_VDB=ON \
 		$crossopts
 	cmake --build build
 #-DF3D_PLUGIN_BUILD_DRACO=OFF \
@@ -36,8 +37,6 @@ build() {
 	#VTK Not Built With, ospray Not Packaged
 #-DF3D_PLUGIN_BUILD_USD=OFF \
 	#Not Packaged
-#-DF3D_PLUGIN_BUILD_VDB=OFF \
-	#VTK Not Built With
 }
 
 #check() {
