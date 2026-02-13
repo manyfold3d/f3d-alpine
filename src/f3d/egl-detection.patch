@@ -1,0 +1,21 @@
+diff --git a/library/src/context.cxx b/library/src/context.cxx
+index b404fd3f8..563804646 100644
+--- a/library/src/context.cxx
++++ b/library/src/context.cxx
+@@ -13,6 +13,8 @@
+
+ #include <vtksys/DynamicLoader.hxx>
+
++#include <iostream>
++
+ namespace f3d
+ {
+ //----------------------------------------------------------------------------
+@@ -22,6 +24,7 @@ context::function context::getSymbol(std::string_view lib, std::string_view func
+   libName += lib;
+   libName += vtksys::DynamicLoader::LibExtension();
+
++  std::cout<<libName<<std::endl;
+   vtksys::DynamicLoader::LibraryHandle handle = vtksys::DynamicLoader::OpenLibrary(libName);
+
+   if (!handle)

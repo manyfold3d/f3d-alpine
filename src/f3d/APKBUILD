@@ -9,7 +9,10 @@ arch="all"
 license="BSD-3-Clause"
 makedepends="alembic-dev assimp-dev cmake freeimage-dev git git-lfs opencascade-dev openexr-dev samurai vtk-dev"
 subpackages="$pkgname-bash-completion $pkgname-dev $pkgname-doc $pkgname-fish-completion $pkgname-zsh-completion"
-source="$pkgname-$pkgver.tar.gz::https://github.com/f3d-app/f3d/archive/refs/tags/v$pkgver.tar.gz"
+source="
+	$pkgname-$pkgver.tar.gz::https://github.com/f3d-app/f3d/archive/refs/tags/v$pkgver.tar.gz
+	egl-detection.patch
+"
 builddir="$srcdir/$pkgname-$pkgver/"
 options="!check" #No testsuite in githash version
 build() {
