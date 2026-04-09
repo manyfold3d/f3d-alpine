@@ -1,8 +1,8 @@
 # Contributor: Saijin-Naib <Saijin-Naib_package-maintenance@outlook.com>
 # Maintainer: James Smith <james@floppy.org.uk>
 pkgname=f3d
-pkgver=3.4.1
-pkgrel=2
+pkgver=3.5.0
+pkgrel=0
 pkgdesc="Fast and minimalist 3D viewer."
 url="https://f3d.app"
 arch="x86_64 aarch64"
@@ -52,5 +52,5 @@ package() {
 }
 
 sha512sums="
-3e78801754430141c00884ae0f34d51bec90c04e2104f79d3a717a0b3d6e4bc81758d96ab1f0a8a91ba084ea4ecea00b621e44f62ed6a355668be7157cc36e76  f3d-3.4.1.tar.gz
+da302baff8294af87032d238552f46dbd6ebce04dce2a8ec4711c79398f01d38641b2a8e7da4ab3261c555c6eaf84b73c91e3b100a3a85ef1e1d24b3a654d79e  f3d-3.5.0.tar.gz
 "
