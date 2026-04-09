@@ -1,17 +1,16 @@
 # Contributor: Saijin-Naib <Saijin-Naib_package-maintenance@outlook.com>
-# Maintainer: Saijin-Naib <Saijin-Naib_package-maintenance@outlook.com>
+# Maintainer: James Smith <james@floppy.org.uk>
 pkgname=f3d
 pkgver=3.4.1
 pkgrel=2
 pkgdesc="Fast and minimalist 3D viewer."
 url="https://f3d.app"
-arch="all"
+arch="x86_64 aarch64"
 license="BSD-3-Clause"
 makedepends="alembic-dev assimp-dev cmake freeimage-dev git git-lfs openexr-dev samurai vtk-dev"
 subpackages="$pkgname-bash-completion $pkgname-dev $pkgname-doc $pkgname-fish-completion $pkgname-zsh-completion"
 source="
 	$pkgname-$pkgver.tar.gz::https://github.com/f3d-app/f3d/archive/refs/tags/v$pkgver.tar.gz
-	egl-detection.patch
 "
 builddir="$srcdir/$pkgname-$pkgver/"
 options="!check" #No testsuite in githash version
@@ -31,13 +30,13 @@ build() {
 		-DF3D_PLUGIN_BUILD_VDB=ON \
 		$crossopts
 	cmake --build build
-#-DF3D_PLUGIN_BUILD_OCCT=OFF \
-  # OpenCascade not built with until VTK 9.5 is officially built
-#-DF3D_PLUGIN_BUILD_DRACO=OFF \
-  # Draco is only in testing/edge, and we're building on 3.23
-#-DF3D_MODULE_RAYTRACING=OFF \
+	#-DF3D_PLUGIN_BUILD_OCCT=OFF \
+	# OpenCascade not built with until VTK 9.5 is officially built
+	#-DF3D_PLUGIN_BUILD_DRACO=OFF \
+	# Draco is only in testing/edge, and we're building on 3.23
+	#-DF3D_MODULE_RAYTRACING=OFF \
 	#VTK Not Built With, ospray Not Packaged
-#-DF3D_PLUGIN_BUILD_USD=OFF \
+	#-DF3D_PLUGIN_BUILD_USD=OFF \
 	#Not Packaged
 }
 
